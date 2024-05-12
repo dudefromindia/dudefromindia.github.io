@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Website</title>
+    <style>
+        #myButton {
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+        #myButton:hover {background-color: #3e8e41}
+        #myButton:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+
+<button id="myButton" onclick="changeColor()">Click me</button>
+
+<script>
+function changeColor() {
+    var color = '#'+ Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById("myButton").style.backgroundColor = color;
+}
+</script>
+
+</body>
+</html>
